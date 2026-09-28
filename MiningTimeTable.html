@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 1. Define the global variable */
+        :root {
+            --Mon-color: #e9ff6f;
+            --Tue-color: #f3f8fb;
+            --wed-color: #ffa286;
+            --Thu-color: #f2f0f8;
+            --Fri-color: #fe83d5;
+            --Sat-color: #fcffe8;
+           
+            
+        }
+        /* end global variable */
+
+        body {
+            font-family: 'Times New Roman', Times, serif, Arial, sans-serif;
+            padding: 10px;
+        }
+
+        .topcantanar {
+            justify-self: center;
+            padding-bottom: 5px;
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .logoCantanar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 10px;
+            /* text-align: center; */
+
+        }
+
+        .topcantanar img {
+            height: 100px;
+        }
+
+        table {
+            width: 100%;
+            table-layout: fixed;
+            /* Ensures fixed grid fitting the screen width without overflow */
+            border-collapse: collapse;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        th,
+        td {
+            border: 1px solid #000;
+            padding: 3px 2px;
+            vertical-align: middle;
+            font-size: 2.2vw;
+            /* Scales text fluidly relative to viewport width */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        th {
+            background-color: #e7e7e9;
+            
+        }
+
+        /* Adjusted column widths for optimal display */
+        th:nth-child(1),
+        td:nth-child(1) {
+            width: 12%;
+        }
+
+        th:not(:first-child),
+        td:not(:first-child) {
+            width: auto;
+        }
+
+        .recess {
+            font-weight: bold;
+            writing-mode: vertical-rl;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 2vw;
+        }
+
+
+        /* 2. Tablets (Portrait) & Larger Phones */
+        @media (min-width: 768px) {
+
+            /* Your tablet styles here */
+            body {
+                padding-top: 25px;
+                padding-left: 60px;
+                padding-right: 60px;
+            }
+        }
+
+
+        /* Desktop override for standard readable font size */
+        @media (min-width: 1024px) {
+
+            table {
+                margin-bottom: 15px;
+            }
+
+            th,
+            td {
+                font-size: 12px;
+                padding: 6px;
+                font-size: large;
+            }
+
+            .recess {
+                font-size: large;
+                ;
+            }
+
+            body {
+                padding-top: 25px;
+                padding-left: 260px;
+                padding-right: 260px;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topcantanar">
+        <div class="topcantanar logoCantanar">
+            <img src="/img/jharkhand_Logo.png"
+                alt="" srcset="">
+            <p>Govt. Polytechnic Bhaga, Dhanbad</p>
+            <p>[Department of Higher. Technical Education, Govt. of Jharkhand]</p>
+            <p>BIT Sindri Campus, PO: Motinagar, Dist: Dhanbad (Jharkhand) 828120</p>
+            <p>Website: www.gpbhaga.com / email: gpbhaga@gmall.com</p>
+
+        </div>
+
+        <h3>Class Routine of 3rd Semester, Mining Engineering Diploma with effect from 02.09.2026</h3>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2">Day</th>
+                <th>10:00 am<br>To<br>11:00 am</th>
+                <th>11:00 am<br>To<br>12:00 am</th>
+                <th>12:00 am<br>To<br>1:00 pm</th>
+                <th>1:00 pm<br>To<br>2:00 pm</th>
+                <th>2:00 pm<br>To<br>2:30 pm</th>
+                <th>2:30 pm<br>To<br>3:30 pm</th>
+                <th>3:30 pm<br>To<br>4:30 pm</th>
+            </tr>
+            <tr>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr >
+                <td><strong>Mon</strong></td>
+                <td>Mining Geology_II <br>(T)<br>Ajyant Kr.</td>
+                <td>Professional Skill <br>(T)<br>RPR</td>
+                <td colspan="2">Opencast Mining <br>(T)<br>SBM</td>
+                <td rowspan="6" class="recess">.......... Recess .........</td>
+                <td colspan="2">Yoga (P)<br>M.Kumar-G1<br>NK Singh-G2<br>Akash Kr.- G3</td>
+            </tr>
+            <tr style="background-color: var(--Tue-color);">
+                <td><strong>Tue</strong></td>
+                <td colspan="2">Mining Geology_II <br>(T)<br>Ajyant Kr.</td>
+                <td colspan="2">Underground Metallic Ferrous Mining <br>(P)<br>SBN</td>
+                <td colspan="2">Yoga (P)<br>M.Kumar-G2<br>NK Singh-G3<br>Akash Kr.- G1</td>
+            </tr>
+            <tr >
+                <td><strong>Wed</strong></td>
+                <td colspan="2">Opencast Mining <br>(P)<br>SBM</td>
+                <td colspan="2">Mining Surveying-I (T)<br>SBM</td>
+                <td colspan="2">Opencast Mining (P)<br>SBM</td>
+            </tr>
+            <tr style="background-color: var(--Thu-color);">
+                <td><strong>Thu</strong></td>
+                <td colspan="2">Underground Metallic Ferrous Mining <br>(T)<br>SBN</td>
+                <td colspan="2">Mining Geology_II <br>(P)<br>Ajyant Kr.</td>
+                <td colspan="2">Underground Metallic Ferrous Mining (P)<br>SBN</td>
+            </tr>
+            <tr>
+                <td><strong>Fri</strong></td>
+                <td>Professional Skill (T)<br>RPR</td>
+                <td>Mining Surveying-I (T)<br>SBM</td>
+                <td colspan="2">Mining Surveying-I (P)<br>SBM</td>
+                <td colspan="2">Yoga (P)<br>M.Kumar-G3<br>NK Singh-G1<br>TKM-G2</td>
+            </tr>
+            <tr style="background-color: var(--Sat-color);">
+                <td><strong>Sat</strong></td>
+                <td>Opencast Mining (T)<br>SBM</td>
+                <td>U/G Metallic Ferrous Mining (T)<br>SBN</td>
+                <td>Professional Skill (T)<br>RPR</td>
+                <td>X</td>
+                <td colspan="2">Mining Geology_II (P)<br>Ajyant Kr.</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
