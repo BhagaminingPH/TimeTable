@@ -79,20 +79,20 @@
       font-size: 1rem;
     }
 
-    /* Action button */
+    /* Action button  */
     .btn-view {
-      background-color: #e0e7ff;
-      color: #4338ca;
       border: none;
+      color: #4338ca;
       border-radius: 8px;
+      background-color: #e0e7ff; 
       padding: 0.4rem 0.85rem;
-      font-size: 0.875rem;
-      font-weight: 500;
-      display: inline-flex;
-      align-items: center;
+      /* font-size: 0.875rem; */
+      /* font-weight: 500;  */
+      /* transition: all 0.2s ease; */
+      /* display: inline-flex; */
+      /* align-items: center; */
       gap: 0.4rem;
-      transition: all 0.2s ease;
-    }
+    } 
 
     .btn-view:hover {
       background-color: #4338ca;
@@ -101,24 +101,24 @@
 
     .num-col {
       width: 70px;
-      font-weight: 600;
+      /* font-weight: 600; */
       color: #94a3b8;
     }
 
-    .text-end {
+    .actionBtn{
       display: none;
     }
 
     /* 2. Tablets (Portrait) & Larger Phones */
     @media (min-width: 768px) {
-      .text-end {
+      .actionBtn {
         display: block;
       }
     }
 
     /* Desktop override for standard readable font size */
     @media (min-width: 1024px) {
-      .text-end {
+      .actionBtn {
         display: block;
       }
     }
@@ -150,31 +150,32 @@
         <table class="table table-hover align-middle">
           <thead>
             <tr>
-              <th scope="col" class="num-col">No.</th>
-              <th scope="col">Branch</th>
-              <th scope="col" class="text-end">View</th>
+              <th class="num-col">No.</th>
+              <th>Branch</th>
+              <th></th>
             </tr>
           </thead>
 
-          <tr style="cursor: pointer;" onclick="window.location.href='MiningTimeTable.html'">
-            <td class="num-col">1.</td>
-            <td class="fw-medium">3rd Sem. Mining Engineering</td>
-            <td class="text-end">
-              <span class="btn-view"><i class="fa-regular fa-eye"></i> View</span>
-            </td>
-          </tr>
+          <tbody>
+            <tr style="cursor: pointer;" onclick="window.location.href='MiningTimeTable.html'">
+              <td class="num-normal">1.</td>
+              <td class="fw-medium">3rd Sem. Mining Engineering</td>
+              <td class="actionBtn">
+                <span class="btn-view"><i class="fa-regular fa-eye"></i> View</span>
+              </td>
+            </tr>
 
-          <tr onclick="window.location.href='computer_Engg.html'" style="cursor: pointer;">
-            <td class="num-col">2.</td>
-            <td class="fw-medium">3rd Sem. Computer Engineering </td>
-            <td class="text-end">
-              <span class="btn-view"><i class="fa-regular fa-eye"></i> View</span>
-            </td>
-          </tr>
+            <tr onclick="window.location.href='computer_Engg.html'" style="cursor: pointer;">
+              <td class="num-col">2.</td>
+              <td class="fw-normal">3rd Sem. Computer Engineering </td>
+              <td class="actionBtn">
+                <span class="btn-view"><i class="fa-regular fa-eye"></i> View</span>
+              </td>
+            </tr>
 
 
 
-
+          </tbody>
 
         </table>
       </div>
