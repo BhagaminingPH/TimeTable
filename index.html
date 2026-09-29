@@ -105,7 +105,11 @@
       font-weight: 600;
       color: #94a3b8;
     }
-    
+    .prevent-select {
+      -webkit-user-select: none; /* Safari */
+      -ms-user-select: none; /* IE 10 and IE 11 */
+      user-select: none; /* Standard syntax */
+    }
 
     .actionBtn{
       display: none;
@@ -165,7 +169,7 @@
             <tr style="cursor: pointer;" onclick="window.location.href='MiningTimeTable.html'">
               <td class="num-normal">1.</td>
               <td class="fw-medium">3rd Sem. Mining Engineering</td>
-              <td class="actionBtn">
+              <td class="actionBtn prevent-select">
                 <span class="btn-view"><i class="fa-regular fa-eye"></i> View</span>
               </td>
             </tr>
@@ -173,7 +177,7 @@
             <tr onclick="window.location.href='computer_Engg.html'" style="cursor: pointer;">
               <td class="num-col">2.</td>
               <td class="fw-normal">3rd Sem. Computer Engineering </td>
-              <td class="actionBtn">
+              <td class="actionBtn prevent-select">
                 <span class="btn-view"><i class="fa-regular fa-eye"></i> View</span>
               </td>
             </tr>
