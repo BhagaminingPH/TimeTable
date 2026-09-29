@@ -57,10 +57,11 @@
       background-color: #f1f5f9;
       color: #64748b;
       font-size: 0.85rem;
-      font-weight: 600;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      border-bottom: 1px solid #e2e8f0;
+      border-bottom: 0px;
+
       padding: 1rem 1.25rem;
     }
 
@@ -101,9 +102,10 @@
 
     .num-col {
       width: 70px;
-      /* font-weight: 600; */
+      font-weight: 600;
       color: #94a3b8;
     }
+    
 
     .actionBtn{
       display: none;
@@ -120,6 +122,9 @@
     @media (min-width: 1024px) {
       .actionBtn {
         display: block;
+      }
+      .viewsection{
+        font-weight: 700;
       }
     }
   </style>
@@ -152,7 +157,7 @@
             <tr>
               <th class="num-col">No.</th>
               <th>Branch</th>
-              <th></th>
+              <th class="actionBtn viewsection">view </th>
             </tr>
           </thead>
 
